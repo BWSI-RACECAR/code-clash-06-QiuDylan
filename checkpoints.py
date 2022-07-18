@@ -39,11 +39,11 @@ class Solution:
         for i in range(len(checkpoints)):
             for j in range(i + 1, len(checkpoints)):
                 count = abs(i-j)
-                
+                if count > 0:
+                    output.append(count)
 
-                if count == 0:
-                    return 0
-        return output.append(count)
+                
+        return output
 
 
         pass

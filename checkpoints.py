@@ -28,7 +28,7 @@ Input: [10, 8, 4, 1] ; Output: 4
 Input: [5, 0, 3, 6] ; Output: 3
 """
 
-from black import out
+
 
 
 class Solution:

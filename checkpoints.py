@@ -28,6 +28,9 @@ Input: [10, 8, 4, 1] ; Output: 4
 Input: [5, 0, 3, 6] ; Output: 3
 """
 
+from black import out
+
+
 class Solution:
     def longestdistance(self, checkpoints):
         # type checkpoints: list
@@ -36,14 +39,25 @@ class Solution:
         # TODO: Write code below to return an int with the solution to the prompt
         count = 0
         output = []
+        def bubblesort(arr):
+            for i in range(0, len(arr)):
+                for j in range(0, len(arr)-1):
+
+                    if arr[i] > arr[j+1]:
+                        temp = arr[j]
+                        arr[j] =arr[j+1]
+                        arr[j+1] = temp
+            return arr
+        checkpoints = bubblesort(checkpoints)
+
+
         for i in range(len(checkpoints)-1):
-            for j in range(i + 1, len(checkpoints)):
-                count = abs(i-j)
-                if count > 0:
-                    output.append(count)
+            output.append(checkpoints[i+1] - checkpoints[i])
+        
+        output = bubblesort(output)
 
                 
-        return max(output)
+        return output[len(checkpoints) -2]
 
 
         pass

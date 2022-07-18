@@ -35,14 +35,16 @@ class Solution:
         
         # TODO: Write code below to return an int with the solution to the prompt
         count = 0
-        memory = []
+        max1 = 0
         for i in range(len(checkpoints)):
             for j in range(i + 1, len(checkpoints)):
                 count = abs(i-j)
-                memory.append(count)
+                if count > max1:
+                    max1 = count
+
                 if count == 0:
                     return 0
-        return max(memory)
+        return max1
 
 
         pass

@@ -40,6 +40,8 @@ class Solution:
             for j in range(i + 1, len(checkpoints)):
                 count = abs(i-j)
                 memory.append(count)
+                if count == 0:
+                    return 0
         return max(memory)
 
 

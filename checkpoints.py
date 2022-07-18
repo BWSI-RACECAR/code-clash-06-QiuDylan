@@ -36,8 +36,8 @@ class Solution:
         # TODO: Write code below to return an int with the solution to the prompt
         count = 0
         memory = []
-        for i in range(len(check_points)):
-            for j in range(i + 1, len(check_points)):
+        for i in range(len(checkpoints)):
+            for j in range(i + 1, len(checkpoints)):
                 count = abs(i-j)
                 memory.append(count)
         return max(memory)

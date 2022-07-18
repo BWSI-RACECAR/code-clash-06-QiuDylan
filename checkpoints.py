@@ -36,14 +36,14 @@ class Solution:
         # TODO: Write code below to return an int with the solution to the prompt
         count = 0
         output = []
-        for i in range(len(checkpoints)):
+        for i in range(len(checkpoints)-1):
             for j in range(i + 1, len(checkpoints)):
                 count = abs(i-j)
                 if count > 0:
                     output.append(count)
 
                 
-        return output
+        return max(output)
 
 
         pass
